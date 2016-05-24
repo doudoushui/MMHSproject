@@ -1,0 +1,66 @@
+<extend name="Public/index"/>
+<block name="content">
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">商品评论信息修改</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+              商品评论信息修改表
+          </div>
+          <div class="panel-body">
+               <div class="row">
+                   <div class="col-lg-6">
+                       <form role="form" action="{:U('Admin/Goodscomment/update')}" method="post" enctype="multipart/form-data">
+                           <input type="hidden" name="id" value="{$info.id}">
+                           <div class="form-group">
+                               <label>用户ID</label>
+                               <input name="user_id" value="{$info.user_id}" placeholder="请输入要修改的用户ID" class="form-control">
+                           </div>
+
+                           <div class="form-group">
+                               <label>商品ID</label>
+                               <input name="goods_id" value="{$info.goods_id}" placeholder="请输入要修改的标题名" class="form-control">
+                           </div>
+                          
+                            <div class="form-group">
+                               <label>商品图片</label>
+                               <input name="gpic" type="file">
+                               <img src="{$info.gpic}" width="100px">
+                           </div>
+
+                           <div class="form-group">
+                               <label>商品名</label>
+                               <input name="gname" value="{$info.gname}" placeholder="请输入要修改的商品名名" class="form-control">
+                           </div>
+
+                           <div class="form-group">
+                               <label>评论信息</label>
+                               <textarea name="commsg" rows="3" value="{$info.commsg}" placeholder="请输入要修改的评论信息" class="form-control">{$info.commsg};</textarea>
+                           </div>
+                           
+                           <div class="form-group">
+                               <label>评论时间</label>
+                               <input name="comtime" value="{$info.comtime}" placeholder="请输入要修改的评论时间" class="form-control">
+                           </div>
+
+                           <button class="btn btn-warning" type="reset">重置</button>
+                           <button class="btn btn-info" type="submit">提交</button>
+                       </form>
+                   </div>
+               </div>
+          <!-- /.panel-body -->
+          </div>
+
+        <!-- /.panel -->
+        </div>
+       <!-- /.col-lg-12 -->
+      </div>
+    </div>
+</div>  
+</block>

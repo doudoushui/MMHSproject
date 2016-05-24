@@ -1,0 +1,64 @@
+<extend name="Public/index"/>
+<block name="content">
+
+<div class="container" >
+
+<div class="jumbotron" style="height:1150px;background-image:url('__PUBLIC__/Home/Images/register.jpg');no-repeat;" >
+  <h4 style="color:#0ef">
+Red lotus open Bingdi flowers, Chaoyang Caifeng Xiyingmen, Heke at the door of Qing wedding, candle shining knot marriage, conjugal bliss Qinse drum, Luan wind and strong, wish the love Yu Xin Wan Jun heart, emotional ties to the gentleman jade. Happy marriage.</h4>
+<h4>红荷张开并蒂花，朝阳彩凤喜迎门，贺客满门庆新婚，红烛高照结姻缘，百年好合琴瑟鼓，鸾风和鸣情意浓，祝愿爱挽君心玉人心，情系君身玉人身，新婚快乐</h4>
+  <!-- <image src="__PUBLIC__/Home/login.jpg"></image> -->
+     <button type="button" style="color:#0ef" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">
+          快来注册哦~~
+     </button>
+
+        <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <center>
+               <h4 class="modal-title" id="myModalLabel">新用户注册</h4>
+              </center>
+            </div>
+            <div class="modal-body">
+              <form role="form" method="post" action="{:U('Home/Register/register')}">
+                  <fieldset>
+                      <div class="form-group">
+                      <label>用户名</label>
+
+                      <input class="form-control" placeholder="用户名为4-10位" name="username" type="text" autofocus>
+                      </div>
+                      <div class="form-group">
+                      <label>密码</label>
+                        <input class="form-control" placeholder="密码位4-10位" name="pwd" type="password" value="">
+                      </div>
+
+                      <div class="form-group">
+                      <label>手机号</label>
+
+                      <input class="form-control" placeholder="请输入合法手机号" name="tel" type="text" autofocus>
+                      </div>
+                     
+                    <div class="form-group">
+                      <label>验证码</label>
+                       <center>
+                      <input name="vcode" class="form-control">
+                      <img src="{:U('Home/Public/CreateVcode')}" onclick="this.src=this.src+'?a'" alt="">
+                      </center>
+                      </div>
+                    
+                    <button type="button" style="width:200px;height:48px;background:red;color:#fff;font-size:20px;float:left;margin-left:20px;" class="btn btn-default" data-dismiss="modal">退出</button>
+                    <button type="submit" style="width:200px;float:left" class="btn btn-lg btn-success btn-block">注册</button>
+                    <span style="margin-right:20px;"><a href="{:U('Home/Login/index')}">去登录</a></span>
+                     
+                      <!-- <button class="btn btn-lg btn-success btn-block">登录</button> -->
+                  </fieldset>
+              </form>
+            </div>           
+          </div>
+        </div>
+      </div>
+    </div>
+</block>

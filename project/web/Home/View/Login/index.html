@@ -1,0 +1,68 @@
+<extend name="Public/index"/>
+<block name="content">
+
+<div class="container" >
+
+<div class="jumbotron" style="height:1000px;background-image:url('__PUBLIC__/Home/Images/login.jpg')" >
+  <h4 style="color:#f0e">
+We are here to witness the union of two lives in marriage. 。</h4>
+<h4>我们在此为两位联姻作见证</h4>
+  <!-- <image src="__PUBLIC__/Home/login.jpg"></image> -->
+  <button type="button" style="color:#f0e" class="btn  btn-lg" data-toggle="modal" data-target="#myModal">
+    点此登录哦~
+  </button>
+  <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p> -->
+</div>
+
+    <div class="row">
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <center>
+             <h4 class="modal-title" id="myModalLabel">用户登录</h4>
+            </center>
+          </div>
+          <div class="modal-body">
+            <form role="form" method="post" action="{:U('Home/Login/login')}">
+                <fieldset>
+                    <div class="form-group">
+                    <label>用户名</label>
+
+                        <input class="form-control" placeholder="用户名4-10位" name="username" type="text" autofocus>
+                    </div>
+                    <div class="form-group">
+                    <label>密码</label>
+
+                        <input class="form-control" placeholder="密码4-10位" name="pwd" type="password" value="">
+                    </div>
+                   
+                  <div class="form-group">
+                    <label>验证码</label>
+                     <center>
+                    <input name="vcode" class="form-control">
+                    <img src="{:U('Home/Public/CreateVcode')}" onclick="this.src=this.src+'?a'" alt="">
+                    </center>
+                    </div>
+                  
+                  <button type="button" style="width:200px;height:48px;background:red;color:#fff;font-size:20px;float:left;margin-left:20px;" class="btn btn-default" data-dismiss="modal">退出</button>
+                  <button type="submit" style="width:200px;float:left" class="btn btn-lg btn-success btn-block">登录</button>
+                  <span><a href="{:U('Home/Regin/index')}">没有账号,立即注册</a></span>
+                   
+                    <!-- <button class="btn btn-lg btn-success btn-block">登录</button> -->
+                </fieldset>
+            </form>
+          </div>           
+        </div>
+      </div>
+    </div>
+</div>
+</block>

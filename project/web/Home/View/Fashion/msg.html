@@ -1,0 +1,68 @@
+﻿<extend name="Public/index"/>
+<block name="content">
+
+   <!-- //轮播 -->
+   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+     <!-- Indicators -->
+     <ol class="carousel-indicators">
+       <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+       <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+       <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+     </ol>
+
+     <!-- Wrapper for slides -->
+     <div class="carousel-inner" role="listbox">
+       <div class="item active">
+         <center>
+          <img src="__PUBLIC__/images/1.jpg" style="width:1000px;height:300px;" alt="...">
+         </center>
+         <div class="carousel-caption">
+          恋爱吧
+         </div>
+       </div>
+
+       <div class="item">
+    		 <center>
+         <img src="__PUBLIC__/images/2.jpg" style="width:1000px;height:300px;" alt="...">
+         </center>
+         <div class="carousel-caption">
+           约会吧
+         </div>
+       </div>
+
+        <div class="item">
+        <center>
+         <img src="__PUBLIC__/images/3.jpg" style="width:1000px;height:300px;" alt="...">
+         </center>
+         <div class="carousel-caption">
+           结婚吧
+         </div>
+       </div>
+     
+     </div>
+
+     <!-- Controls -->
+     <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+       <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+       <span class="sr-only">Previous</span>
+     </a>
+     <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+       <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+       <span class="sr-only">Next</span>
+     </a>
+   </div>
+   <!-- END 轮播 -->
+<div class="media">
+  <div class="media-left media-middle">
+    <a href="#">
+      <img class="media-object" src="<?php echo $info['fpic']?>" style="width:500px;" alt="...">
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading" style="font-size:20px;color:#eef;background:#bbb;height:40px;line-height:40px;">填写标题:<?php echo $info['title']?></h4><br>
+    <span>发布时间:&nbsp;<?php echo $info['ftime']?></span> <span style="font-size:14px;color:#222;background:#bbb;height:30px;line-height:30px;margin-left:200px;"><a href="{:U('Home/Fashion/index')}">点击返回</a></span><br><br>
+
+    <?php echo $info['fmsg']?>
+  </div>
+</div> 
+</block>
